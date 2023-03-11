@@ -17,7 +17,7 @@ return [
     'g3rand_child_count'=> 'GG-Grand Child Count',
     'g4rand_child_count'=> 'GGG-Grand Child Count',
     'user_found'        => '<strong>:total</strong> found with keyword : <strong>:keyword</strong>',
-    'search_your_family' => 'Find Your Family',
+    'search_your_family' => 'कनीन होजो?',
     'search_your_family_placeholder' => 'Enter name/nickname... click Search',
     'example'           => 'Eg.',
     'address'           => 'Address',

@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                <li><a href="{{ route('users.search') }}">{{ __('app.search_your_family') }}</a></li>
+                <!-- <li><a href="{{ route('users.search') }}">{{ __('app.search_your_family') }}</a></li> -->
                 <li><a href="{{ route('birthdays.index') }}">{{ __('birthday.birthday') }}</a></li>
             </ul>
 
@@ -27,8 +27,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
                 <?php $mark = (preg_match('/\?/', url()->current())) ? '&' : '?';?>
-                <li><a href="{{ url(url()->current() . $mark . 'lang=en') }}">en</a></li>
-                <li><a href="{{ url(url()->current() . $mark . 'lang=id') }}">id</a></li>
+                <!-- <li><a href="{{ url(url()->current() . $mark . 'lang=en') }}">en</a></li>
+                <li><a href="{{ url(url()->current() . $mark . 'lang=id') }}">id</a></li> -->
                 @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>
