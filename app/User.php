@@ -141,6 +141,14 @@ class User extends Authenticatable
         return $this->mother_id ? link_to_route('users.show', $this->mother->name, [$this->mother_id]) : null;
     }
 
+    public function currentSpouse()
+    {
+        if ($this->gender_id == 1) {
+            return $this->belongsToMany(User::class, 'couples', 'husband_id', 'wife_id')->using('App\CouplePivot')->withPivot(['id'])->withTimestamps()->orderBy('marriage_date', 'desc')->first();
+        }
+        return $this->belongsToMany(User::class, 'couples', 'wife_id', 'husband_id')->using('App\CouplePivot')->withPivot(['id'])->withTimestamps()->orderBy('marriage_date', 'desc')->first();
+    }
+
     public function wifes()
     {
         return $this->belongsToMany(User::class, 'couples', 'husband_id', 'wife_id')->using('App\CouplePivot')->withPivot(['id'])->withTimestamps()->orderBy('marriage_date');
