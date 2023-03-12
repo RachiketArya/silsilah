@@ -47,7 +47,7 @@
             @endif
             <tr>
                 <th>{{ trans('user.phone') }}</th>
-                <td>{{ $user->phone }}</td>
+                <td><a href="https://wa.me/{{ str_replace('+', '',$user->phone) }}" target="_blank" rel="noopener noreferrer">{{ $user->phone }}</a></td>
             </tr>
             <tr>
                 <th>{{ trans('user.address') }}</th>
