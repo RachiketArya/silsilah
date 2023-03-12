@@ -11,6 +11,7 @@
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://silsilah-three.vercel.app",
+        "APP_KEY": "base64:kOUwI33cxx1dldOZfXCYvhc8HMPB3XgcBKz8JZk02eY=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
