@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'UsersController@search');
+Route::get('/', 'UsersController@showMishriLalTree');
 
 Auth::routes();
 

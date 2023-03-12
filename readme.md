@@ -113,3 +113,19 @@ This family tree view is using the [Horizontal Family Tree CSS](https://codepen.
 ## License
 
 Silsilah project is open-sourced software licensed under the [MIT license](LICENSE).
+
+
+### Points to note:
+
+Adding the following code to search page helps
+
+```
+<?php $treeUser = \App\User::with('father', 'mother')->where('id', '=', '4f090b23-dae5-4b44-8fd4-92c009069054')->first(); ?>
+@include('users.tree', ['user' => $treeUser])
+```
+
+The following can be used for changing the style of the links:
+
+```
+    {{ link_to_route('users.chart', trans('app.show_family_chart'), [$user->id], ['class' => Request::segment(3) == 'chart' ? 'btn btn-default active' : 'btn btn-default']) }}
+```

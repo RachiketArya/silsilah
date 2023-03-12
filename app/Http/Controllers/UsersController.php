@@ -36,6 +36,21 @@ class UsersController extends Controller
         return view('users.search', compact('users'));
     }
 
+
+    /**
+     * Shows the default Mishri Lal Kothari Family Tree.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function showMishriLalTree()
+    {
+        $treeUser = \App\User::with('father', 'mother')->where('id', '=', '4f090b23-dae5-4b44-8fd4-92c009069054')->first();
+
+        return view('users.tree', ['user' => $treeUser]);
+    }
+
+
+
     /**
      * Display the specified User.
      *
