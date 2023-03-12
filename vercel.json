@@ -4,6 +4,8 @@
         "api/index.php": { "runtime": "vercel-php@0.5.2" }
     },
     "routes": [{
+        "handle":"filesystem"
+        }, {
         "src": "/(.*)",
         "dest": "/api/index.php"
     }],
