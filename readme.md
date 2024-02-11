@@ -129,3 +129,9 @@ The following can be used for changing the style of the links:
 ```
     {{ link_to_route('users.chart', trans('app.show_family_chart'), [$user->id], ['class' => Request::segment(3) == 'chart' ? 'btn btn-default active' : 'btn btn-default']) }}
 ```
+
+
+## Rachiket's notes to run the app:
+1. To run the local mysql server, use docker and run the jackett-mysql-local container
+2. Run adminer server and log in to 127.0.0.1:3306 with user, "user" and password, "password" to login to the database.
+3. Run the php server using ```php artisan serve```
