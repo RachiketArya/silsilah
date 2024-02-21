@@ -20,8 +20,7 @@ services:
       - app-network
 
   db:
-    image: mysql:5.7
-    platform: linux/amd64
+    image: mysql:latest
     container_name: db
     restart: unless-stopped
     environment:
@@ -29,14 +28,15 @@ services:
       MYSQL_USER: homestead
       MYSQL_PASSWORD: secret
       MYSQL_ROOT_PASSWORD: secret
+    ports:
+      - "3306:3306"
     volumes:
       - dbdata:/var/lib/mysql
     networks:
       - app-network
 
   adminer:
-    image: adminer
-    platform: linux/amd64
+    image: adminer:latest
     restart: always
     ports:
       - 8080:8080

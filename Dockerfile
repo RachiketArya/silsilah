@@ -46,10 +46,12 @@ RUN php artisan route:cache
 RUN php artisan key:generate
 
 # Link public repo
+RUN rm -f public/storage
 RUN php artisan storage:link
 
 # Change ownership of our applications
 RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 775 storage bootstrap/cache
 
 # Expose port 80
 EXPOSE 80
